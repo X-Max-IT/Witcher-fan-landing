@@ -1,7 +1,7 @@
 export function initBurger() {
     const mobileMenu = document.querySelector('[data-js="mobile-menu"]');
     const burgerButton = document.querySelector('[data-js="burger-button"]');
-    const links = document.querySelectorAll('[data-js="menu-list-item"]');
+    const links = mobileMenu.querySelectorAll('[data-js="menu-list-item"]');
 
     burgerButton.addEventListener('click', () => {
         if (mobileMenu && burgerButton) {

@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.hero {
+    overflow: hidden;
+    
+    &__video-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    &__video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
