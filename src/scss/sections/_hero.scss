@@ -2,15 +2,65 @@
 
 .hero {
     overflow: hidden;
-    
+
     &__video-wrapper {
         position: relative;
         width: 100%;
     }
 
     &__video {
+        display: block;
         width: 100%;
         height: auto;
-        display: block;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: rgb(0 0 0 / 50%);
+        background-blend-mode: multiply;
+    }
+
+    &__play-button {
+        @include reset-button;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: var(--border-radius-large);
+        background-color: var(--color-accent);
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+        transition: transform var(--transition-duration);
+
+        @include hover {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
+        &[hidden] {
+            display: none;
+        }
+    }
+
+    &__play-icon {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 16px solid var(--color-icon);
+        margin-left: 4px;
+    }
+
+    &__overlay,
+    &__play-button {
+        transition: opacity var(--transition-duration), transform var(--transition-duration);
     }
 }
