@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+    @include fluid-text(18, 16);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    line-height: 1.28;
+}
+a, button, input, svg * {
+    transition-duration: var(--transition-duration);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+}
+h1 {
+    @include fluid-text(60, 43)
+}
+h2 {
+    @include fluid-text(40, 36)
+}
+h3 {
+    @include fluid-text(30, 26)
+}
+h4 {
+    @include fluid-text(20, 18)
+}
+
+.container {
+    width: 100%;
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2); // Безопасные отступы по бокам
+    margin-inline: auto; // По центру
+    padding-inline: var(--container-padding-x); // внутренние отступы []
+}
+.section {
+    padding-block: var(--section-padding-y);
+}
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+.visible-mobile {
+    @include mobile-up {
+        display: none;
+    }
+}

@@ -1,0 +1,132 @@
+@use '../abstracts' as *;
+
+.header {
+    padding-top: 20px;
+    text-transform: var(--text-uppercase);
+
+    &__inner {
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+
+        &-image {
+            display: block;
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__link {
+        @include fluid-text(20, 14);
+        font-weight: 700;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__social-link {
+        display: flex;
+    }
+
+    &__social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    @include tablet-and-down {
+        &__button {
+            padding: var(--button-padding-tablet);
+        }
+
+        &__actions {
+            gap: 20px;
+        }
+
+        &__list {
+            gap: 20px;
+        }
+
+        &__logo-image {
+            width: 160px;
+        }
+    }
+
+    @include mobile {
+        &__inner {
+            justify-content: center;
+        }
+
+        &__logo-image {
+            width: 200px;
+        }
+
+        &__menu {
+            position: absolute;
+            top: calc(60% + 16px);
+            right: 24px;
+
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 30px;
+            width: 220px;
+            padding: 24px;
+            background-color: var(--color-bg);
+            border-radius: var(--border-radius);
+            font-weight: 700;
+        }
+
+        &__list {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &__link {
+            display: block;
+        }
+
+        &__actions {
+            display: none;
+        }
+
+        &__menu.is-open {
+            display: flex;
+        }
+    }
+
+    @include mobile-s {
+        &__menu {
+            width: 180px;
+            padding: 20px;
+        }
+    }
+}

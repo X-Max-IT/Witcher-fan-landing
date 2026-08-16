@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.button {
+    @include flex-center(true);
+    @include fluid-text(20, 12);
+
+    padding: var(--button-padding);
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    text-transform: var(--text-uppercase);
+    border: var(--border);
+    transition: transform var(--transition-duration);
+
+    @include hover {
+        &:hover {
+            transform: translateY(-4px);
+        }
+    }
+
+    &--transparent {
+        background-color: transparent;
+        border: var(--border-transparent);
+    }
+    &--background {
+        background-color: var(--color-accent);
+        color: var(--color-text);
+    }
+
+    &--accent {
+        border: var(--border-transparent-accent);
+        color: var(--color-accent);
+    }
+}
