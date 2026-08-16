@@ -2,7 +2,7 @@
 
 .button {
     @include flex-center(true);
-    @include fluid-text(20, 12);
+    @include fluid-text(20, 14);
 
     padding: var(--button-padding);
     border-radius: var(--border-radius);

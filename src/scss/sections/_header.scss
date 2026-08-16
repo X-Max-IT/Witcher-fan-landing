@@ -49,7 +49,7 @@
     &__socials {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: clamp(12px, 1.3vw, 25px);
     }
 
     &__social-link {
