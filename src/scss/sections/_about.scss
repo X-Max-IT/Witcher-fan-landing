@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.about {
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    &__image {
+        width: 55%;
+        height: auto;
+    }
+}

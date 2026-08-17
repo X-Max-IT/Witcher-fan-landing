@@ -24,7 +24,7 @@ h6 {
     font-weight: 700;
 }
 h1 {
-    @include fluid-text(60, 43)
+    @include fluid-text(45, 34)
 }
 h2 {
     @include fluid-text(40, 36)
@@ -43,7 +43,8 @@ h4 {
     padding-inline: var(--container-padding-x); // внутренние отступы []
 }
 .section {
-    padding-block: var(--section-padding-y);
+    padding-top: var(--section-padding-y-top);
+    padding-bottom: var(--section-padding-y-bottom);
 }
 .hidden-mobile {
     @include mobile {
