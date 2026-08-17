@@ -4,6 +4,7 @@
     --color-icon: #fdfdfd;
     --color-text-muted: #888888;
     --color-accent: #DA9B2E;
+    --color-accent-dark: #3f3206;
 
     --font-family-base: 'Inter', sans-serif;
     --font-family-heading: 'Cinzel', serif;
@@ -17,11 +18,16 @@
 
     --button-padding: 15px 30px;
     --button-padding-tablet: 10px 20px;
+
     --border-radius: 3px;
+    --border-radius-card: 5px;
     --border-radius-large: 50%;
+
     --border: none;
     --border-transparent: 1px solid var(--color-text);
+    --border-accent-dark: 1px solid var(--color-accent-dark);
     --border-transparent-accent: 1px solid var(--color-accent);
+
 
     --transition-duration: 0.3s ease;
 }

@@ -24,7 +24,7 @@ h6 {
     font-weight: 700;
 }
 h1 {
-    @include fluid-text(45, 34)
+    @include fluid-text(45, 30)
 }
 h2 {
     @include fluid-text(40, 36)
@@ -34,6 +34,9 @@ h3 {
 }
 h4 {
     @include fluid-text(20, 18)
+}
+h5 {
+    @include fluid-text(18, 16)
 }
 
 .container {

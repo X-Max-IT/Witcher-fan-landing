@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Geralt of Rivia",
+        "avatar": "/images/characters/geralt.webp",
+        "shortDescription": "The White Wolf. Mutated witcher and master swordsman.",
+        "fullDescription": "Geralt of Rivia is a witcher, a mutant monster-hunter trained from childhood to fight monsters. He travels the Continent, taking contracts and facing difficult choices."
+    },
+    {
+        "id": 2,
+        "name": "Ciri",
+        "avatar": "/images/characters/ciri.webp",
+        "shortDescription": "Child of prophecy, with the power to shape worlds.",
+        "fullDescription": "Cirilla Fiona Elen Riannon is the princess of Cintra and a powerful source of Elder Blood..."
+    }
+]

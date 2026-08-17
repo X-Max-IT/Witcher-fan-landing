@@ -11,6 +11,10 @@ document.querySelector('[data-js="twitter"]').src = images.iconTwitter;
 document.querySelector('[data-js="youtube"]').src = images.iconYoutube;
 document.querySelector('[data-js="facebook"]').src = images.iconFacebook;
 
+document.querySelector('[data-js="rich-story"]').src = images.iconMech;
+document.querySelector('[data-js="open-world"]').src = images.iconFlower;
+document.querySelector('[data-js="meaningful-choices"]').src = images.iconArrow;
+
 document.querySelector('[data-js="geralt-horse"]').src = images.witcherHorse;
 
 

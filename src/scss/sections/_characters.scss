@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+
+.characters {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-transform: var(--text-uppercase);
+        align-items: center;
+
+        &-caption {
+            color: var(--color-accent);
+            text-align: center;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        place-items: center;
+    }
+}
+
+.character-card {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    max-height: 420px;
+    background-size: cover;
+    background-position: center;
+    border: var(--border-accent-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding: 15px;
+    border-radius: var(--border-radius-card);
+    background-image: url('/src/assets/images/fon.webp');
+    transition: border var(--transition-duration), transform var(--transition-duration);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: start;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    @include hover {
+        border: var(--border-transparent-accent);
+        transform: scale(1.02);
+    }
+}

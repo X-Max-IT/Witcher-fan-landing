@@ -1,16 +1,120 @@
 @use '../abstracts' as *;
 
 .about {
+    border-bottom: 1px solid var(--color-accent-dark);
 
     &__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 50px;
+
+        @include tablet-and-down {
+            gap: 30px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 40px;
+        }
+
     }
 
     &__image {
-        width: 55%;
+        width: 40%;
         height: auto;
+        flex-shrink: 0;
+        border: var(--border-transparent-accent);
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__info {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 50px;
+
+        @include tablet-and-down {
+            gap: 30px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__caption {
+        text-transform: var(--text-uppercase);
+        color: var(--color-accent);
+        font-size: 14px;
+
+        @include tablet-and-down {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        text-transform: var(--text-uppercase);
+
+        @include tablet-and-down {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @include tablet-and-down {
+            gap: 10px;
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+
+    &__feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+
+        &-icon {
+            width: 80px;
+            height: auto;
+
+            @include tablet-and-down {
+                width: 60px;
+            }
+            @include mobile-s {
+                width: 60px;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        &-title {
+            text-transform: var(--text-uppercase);
+            color: var(--color-accent);
+        }
     }
 }
