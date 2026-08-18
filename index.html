@@ -20,7 +20,7 @@
             <a href="#about" class="header__link">About</a>
           </li>
           <li class="header__list-item">
-            <a href="#character" class="header__link" data-js="menu-list-item">Characters</a>
+            <a href="#characters" class="header__link" data-js="menu-list-item">Characters</a>
           </li>
           <li class="header__list-item">
             <a href="#system" class="header__link" data-js="menu-list-item">System</a>
@@ -69,7 +69,9 @@
           <p class="about__caption">About the game</p>
           <div class="about__text">
             <h1 class="about__title">A World Worth Exploring</h1>
-            <p class="about__description">From the war-torn swamps of Velen to the vibrant streets of Novigrad and therugged islands of Skellige — explore a massive open world full of life, danger and unforgettable stories</p>
+            <p class="about__description">From the war-torn swamps of Velen to the vibrant streets of Novigrad and
+              therugged islands of Skellige — explore a massive open world full of life, danger and unforgettable
+              stories</p>
           </div>
           <div class="about__features">
             <div class="about__feature">
@@ -105,24 +107,20 @@
         </div>
         <div class="characters__list" data-js="characters-list">
           <article class="character-card">
-            <div class="character-card__content">
-              <div class="character-card__text">
-                <h3 class="character-card__title">Geralt</h3>
-                <p class="character-card__description">The White Wolf. Mutated witcher and master swordsman.</p>
-              </div>
-              <button type="button" class="character-card__button" data-js="card-button">Learn more</button>
-            </div>
           </article>
         </div>
       </div>
 
       <dialog class="character-modal" data-js="character-modal">
         <div class="character-modal__content">
-          <button class="character-modal__close" type="button" data-js="character-modal-close" aria-label="Close">×</button>
-          <img alt="" class="character-modal__image" data-js="character-modal-image">
-          <h2 class="character-modal__title" data-js="character-modal-title"></h2>
-          <div class="character-modal__tags" data-js="character-modal-tags"></div>
-          <p class="character-modal__description" data-js="character-modal-description"></p>
+          <div class="character-modal__head">
+            <img src="#" alt="" class="character-modal__image" data-js="character-modal-image">
+            <div class="character-modal__tags" data-js="character-modal-tags"></div>
+          </div>
+          <div class="character-modal__text">
+            <h2 class="character-modal__title" data-js="character-modal-title"></h2>
+            <p class="character-modal__description" data-js="character-modal-description"></p>
+          </div>
           <button class="character-modal__button" type="button" data-js="character-modal-close">Close</button>
         </div>
       </dialog>

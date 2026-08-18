@@ -3,6 +3,8 @@ import { images } from './data/images'
 import { videos } from './data/videos';
 import { initBurger } from './js/components/burger';
 import { initHeroVideo } from './js/components/hero-video';
+import { renderCard } from './js/components/characters';
+import './js/components/character-modal';
 
 
 document.querySelector('[data-js="logo"]').src = images.logo;
@@ -20,4 +22,5 @@ document.querySelector('[data-js="geralt-horse"]').src = images.witcherHorse;
 
 initBurger();
 initHeroVideo();
+renderCard();
 

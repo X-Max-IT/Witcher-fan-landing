@@ -1,9 +1,9 @@
 [
     {
         "id": 1,
-        "name": "Geralt of Rivia",
-        "avatar": "/images/characters/geralt.webp",
-        "shortDescription": "The White Wolf. Mutated witcher and master swordsman.",
+        "name": "Geralt",
+        "avatar": "/images/geralt.webp",
+        "shortDescription": "The White Wolf. Mutated witcher and master swordsman",
         "tags": [
             "Witcher",
             "Monster Hunter",
@@ -14,8 +14,8 @@
     {
         "id": 2,
         "name": "Ciri",
-        "avatar": "/images/characters/ciri.webp",
-        "shortDescription": "Child of prophecy, with the power to shape worlds.",
+        "avatar": "/images/ciri.webp",
+        "shortDescription": "Child of prophecy, with the power to shape worlds",
         "tags": [
             "Princess",
             "Elder Blood",
@@ -26,8 +26,8 @@
     {
         "id": 3,
         "name": "Yennefer",
-        "avatar": "/images/characters/yennefer.webp",
-        "shortDescription": "Child of prophecy, with the power to shape worlds.",
+        "avatar": "/images/yennefer.webp",
+        "shortDescription": "A powerful sorceress witch a mysterious past",
         "tags": [
             "Sorceress",
             "Master of Chaos",
@@ -38,8 +38,8 @@
     {
         "id": 4,
         "name": "Triss Merigold",
-        "avatar": "/images/characters/triss.webp",
-        "shortDescription": "Sorceress and Geralt's loyal friend",
+        "avatar": "/images/triss.webp",
+        "shortDescription": "The Sorceress of Maribor and Geralt's loyal friend",
         "tags": [
             "Sorceress",
             "Master Healer",
