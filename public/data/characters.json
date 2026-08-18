@@ -4,13 +4,47 @@
         "name": "Geralt of Rivia",
         "avatar": "/images/characters/geralt.webp",
         "shortDescription": "The White Wolf. Mutated witcher and master swordsman.",
-        "fullDescription": "Geralt of Rivia is a witcher, a mutant monster-hunter trained from childhood to fight monsters. He travels the Continent, taking contracts and facing difficult choices."
+        "tags": [
+            "Witcher",
+            "Monster Hunter",
+            "White Wolf"
+        ],
+        "fullDescription": "Geralt of Rivia is a witcher, a mutant monster-hunter for hire. Trained from birth and enhanced with potions, Geralt possesses superhuman abilities, keen senses and unmatched combat skills. He travels the Continent, taking contracts, seeking his destiny and trying to remain human in an inhumane world."
     },
     {
         "id": 2,
         "name": "Ciri",
         "avatar": "/images/characters/ciri.webp",
         "shortDescription": "Child of prophecy, with the power to shape worlds.",
-        "fullDescription": "Cirilla Fiona Elen Riannon is the princess of Cintra and a powerful source of Elder Blood..."
+        "tags": [
+            "Princess",
+            "Elder Blood",
+            "Child of Prophecy"
+        ],
+        "fullDescription": "Cirilla Fiona Elen Riannon, known as Ciri, is the Princess of Cintra and the Child of the Elder Blood. Bound to Geralt by the Law of Surprise, she was trained in the ways of the witcher at Kaer Morhen. Possessing incredible speed, agility, and the mysterious power to navigate time and space, Ciri is relentlessly hunted by the Wild Hunt. She is a fierce warrior fighting to control her destiny and protect the people she loves."
+    },
+    {
+        "id": 3,
+        "name": "Yennefer",
+        "avatar": "/images/characters/yennefer.webp",
+        "shortDescription": "Child of prophecy, with the power to shape worlds.",
+        "tags": [
+            "Sorceress",
+            "Master of Chaos",
+            "Political Mastermind"
+        ],
+        "fullDescription": "Yennefer of Vengerberg is a formidable sorceress and a key member of the Lodge. Known for her sharp intellect, ruthless pragmatism, and mastery of chaos magic, she wields immense political influence across the Northern Kingdoms. Beneath her elegant and often uncompromising exterior lies a deep, passionate love for Geralt and a fierce maternal desire to find and protect Ciri, her true family."
+    },
+    {
+        "id": 4,
+        "name": "Triss Merigold",
+        "avatar": "/images/characters/triss.webp",
+        "shortDescription": "Sorceress and Geralt's loyal friend",
+        "tags": [
+            "Sorceress",
+            "Master Healer",
+            "Ciri's Protector"
+        ],
+        "fullDescription": "Triss Merigold is a talented sorceress and a former royal advisor. Unlike many of her politically ambitious peers, she is deeply compassionate, using her magic primarily to heal and protect the innocent. She acts as a surrogate older sister and mother figure to Ciri, guiding the young princess through the dangers of the Continent. Her warm heart and fierce loyalty make her a vital and beloved ally."
     }
 ]
