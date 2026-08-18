@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.character-modal {
+    width: min(400px, calc(100% - 32px));
+    max-height: calc(100vh - 32px);
+    padding: 0;
+    border: var(--border-accent-dark);
+    border-radius: var(--border-radius-card);
+}

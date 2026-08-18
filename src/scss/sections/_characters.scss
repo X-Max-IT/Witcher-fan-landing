@@ -39,7 +39,8 @@
     justify-content: flex-end;
     padding: 15px;
     border-radius: var(--border-radius-card);
-    background-image: url('/src/assets/images/fon.webp');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 70%),
+     url('/public/images/geralt.webp');
     background-size: cover;
     background-position: center;
     transition: border var(--transition-duration), transform var(--transition-duration);
@@ -55,6 +56,37 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+    &__title {
+        text-transform: var(--text-uppercase);
+    }
+    &__description {
+        font-weight: 300;
+        font-size: 16px;
+    }
+    &__button {
+        @include flex-center(true);
+
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+        text-transform: var(--text-uppercase);
+        color: var(--color-accent);
+        background: transparent;
+        border: var(--border);
+        transition: color var(--transition-duration);
+        
+        &::after {
+            content: '→';
+            transition: transform var(--transition-duration);
+        }
+        @include hover {
+            color: var(--color-text);
+            &::after {
+                transform: translateX(4px);
+            }
+        }
+
     }
 
     @include hover {

@@ -5,8 +5,9 @@
 
 @use './base/base'; // Базовые стили
 
-@use './components/button'; // Кнопки
+@use './components/button';
 @use './components/button-burger';
+@use './components/character-modal';
 
 @use './sections/header'; // Секция Шапки
 @use './sections/hero';
