@@ -18,8 +18,9 @@
 
     &::backdrop {
         background: rgba(5, 5, 5, 0.75);
-        backdrop-filter: blur(3px);
+        backdrop-filter: blur(5px);
     }
+
     &__content {
         position: relative;
         display: flex;
@@ -27,11 +28,13 @@
         gap: 35px;
         padding: 20px;
     }
+
     &__head {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
+
     &__image {
         width: 100%;
         height: 300px;
@@ -40,12 +43,14 @@
         border-radius: var(--border-radius-card);
         border: var(--border-accent-dark);
     }
+
     &__tags {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
         text-align: center;
     }
+
     &__tag {
         @include fluid-text(14, 12);
 
@@ -55,18 +60,22 @@
         text-align: center;
         color: var(--color-tag);
     }
+
     &__text {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
+
     &__title {
         text-transform: var(--text-uppercase);
     }
+
     &__description {
         font-weight: 300;
         line-height: 1.6;
     }
+
     &__button {
         @include flex-center(true);
 

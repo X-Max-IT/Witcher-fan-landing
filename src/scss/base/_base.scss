@@ -14,14 +14,17 @@ body {
 a, button, input, svg * {
     transition-duration: var(--transition-duration);
 }
-h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
     font-family: var(--font-family-heading);
     font-weight: 700;
+}
+
+h1, h2 {
+    font-family: var(--font-family-heading);
+    font-weight: 400;
 }
 h1 {
     @include fluid-text(45, 30)
@@ -38,7 +41,10 @@ h4 {
 h5 {
     @include fluid-text(18, 16)
 }
-
+p {
+    line-height: 1.5;
+    font-weight: 300;
+}
 .container {
     width: 100%;
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2); // Безопасные отступы по бокам
@@ -58,4 +64,9 @@ h5 {
     @include mobile-up {
         display: none;
     }
+}
+.caption {
+    text-transform: var(--text-uppercase);
+    color: var(--color-accent);
+    font-size: 14px;
 }

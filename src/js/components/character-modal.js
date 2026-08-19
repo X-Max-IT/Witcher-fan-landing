@@ -30,19 +30,10 @@ function updateModal(character) {
 
 if (characterList && modal) {
     characterList.addEventListener('click', async (event) => {
-        console.log('Клик зафиксирован! Элемент, на который нажали:', event.target);
-
         const clickedCard = event.target.closest('.character-card');
-
-        // Если лифт поднялся до самого верха HTML и так и не нашел карточку (кликнули реально мимо)
         if (!clickedCard) {
-            console.log('Клик был МИМО карточки персонажа.');
             return;
         }
-
-        // Если код прошел дальше — карточка 100% найдена!
-        console.log('Карточка успешно найдена! Её HTML:', clickedCard);
-
         const characterId = Number(clickedCard.dataset.id);
         try {
             const characters = await fetchCharacters();

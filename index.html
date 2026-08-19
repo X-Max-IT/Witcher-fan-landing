@@ -23,7 +23,7 @@
             <a href="#characters" class="header__link" data-js="menu-list-item">Characters</a>
           </li>
           <li class="header__list-item">
-            <a href="#system" class="header__link" data-js="menu-list-item">System</a>
+            <a href="#req-system" class="header__link" data-js="menu-list-item">System</a>
           </li>
         </ul>
       </nav>
@@ -66,7 +66,7 @@
       <div class="container about__container">
         <img class="about__image" alt="Geralt on horseback" data-js="geralt-horse" loading="lazy">
         <div class="about__info">
-          <p class="about__caption">About the game</p>
+          <p class="about__caption caption">About the game</p>
           <div class="about__text">
             <h1 class="about__title">A World Worth Exploring</h1>
             <p class="about__description">From the war-torn swamps of Velen to the vibrant streets of Novigrad and
@@ -102,7 +102,7 @@
     <section class="section characters" id="characters">
       <div class="container characters__container">
         <div class="characters__head">
-          <p class="characters__head-caption">Main characters</p>
+          <p class="characters__head-caption caption">Main characters</p>
           <h2 class="characters__head-title">Legends of the continent</h2>
         </div>
         <div class="characters__list" data-js="characters-list">
@@ -118,12 +118,43 @@
             <div class="character-modal__tags" data-js="character-modal-tags"></div>
           </div>
           <div class="character-modal__text">
-            <h2 class="character-modal__title" data-js="character-modal-title"></h2>
+            <h3 class="character-modal__title" data-js="character-modal-title"></h3>
             <p class="character-modal__description" data-js="character-modal-description"></p>
           </div>
           <button class="character-modal__button" type="button" data-js="character-modal-close">Close</button>
         </div>
       </dialog>
+    </section>
+    <section class="section system" id="req-system">
+      <div class="container system__container">
+        <div class="system__head">
+          <h2 class="system__title">System requirements</h2>
+        </div>
+        <div class="system__requirements">
+          <div class="system__section system__section--minimum">
+            <h4 class="system-section__title">Minimum</h4>
+            <p class="system-section__text">OS: <span class="system-section__item">Windows 10 (64-bit)</span></p>
+            <p class="system-section__text">Processor: <span class="system-section__item">Intel Core i5-2500K / AMD
+                FX-6300</span></p>
+            <p class="system-section__text">Memory: <span class="system-section__item">8 GB RAM</span></p>
+            <p class="system-section__text">Graphics: <span class="system-section__item">NVIDIA GeForce GTX 770</span>
+            </p>
+            <p class="system-section__text">Storage: <span class="system-section__item">50 GB available space</span></p>
+            <p class="system-section__text">DirectX: <span class="system-section__item">Version 11</span></p>
+          </div>
+          <div class="system__section system__section--recommended">
+            <h4 class="system-section__title">Recommended</h4>
+            <p class="system-section__text">OS: <span class="system-section__item">Windows 10 (64-bit)</span></p>
+            <p class="system-section__text">Processor: <span class="system-section__item">Intel Core i5-2500K / AMD
+                FX-6300</span></p>
+            <p class="system-section__text">Memory: <span class="system-section__item">8 GB RAM</span></p>
+            <p class="system-section__text">Graphics: <span class="system-section__item">NVIDIA GeForce GTX 770</span>
+            </p>
+            <p class="system-section__text">Storage: <span class="system-section__item">50 GB available space</span></p>
+            <p class="system-section__text">DirectX: <span class="system-section__item">Version 11</span></p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer"></footer>

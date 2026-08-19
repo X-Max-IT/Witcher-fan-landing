@@ -49,10 +49,6 @@
     }
 
     &__caption {
-        text-transform: var(--text-uppercase);
-        color: var(--color-accent);
-        font-size: 14px;
-
         @include tablet-and-down {
             text-align: center;
         }
@@ -109,7 +105,7 @@
         &-content {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 8px;
         }
 
         &-title {
