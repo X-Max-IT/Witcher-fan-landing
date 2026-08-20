@@ -164,8 +164,8 @@
           <h2 class="preorder__title">Begin your journey</h2>
           <p class="preorder__description">The path is yours to choose.</p>
         </div>
-        <button type="button" class="button preorder__button button--background"
-          data-js="preorder">Pre-order now</button>
+        <button type="button" class="button preorder__button button--background" data-js="preorder">Pre-order
+          now</button>
       </div>
     </section>
   </main>
@@ -173,13 +173,21 @@
 
 
   <dialog open class="preorder-modal" data-js="preorder-modal">
-    <form method="post">
-      <h3 class="preorder-modal__title"></h3>
-      <p class="preorder-modal__text"></p>
-      <input type="email" name="email" id="email" placeholder="inbox@mail.ru">
-      <button type="button" class="preorder-modal__post" data-js="preorder-button-post">Get the game</button>
-      <button type="button" class="preorder-modal__close" data-js="preorder-button-close">Close</button>
-    </form>
+    <div class="preorder-modal__container">
+      <header class="preorder-modal__header">
+        <h3 class="preorder-modal__title" data-js="preorder-modal-title"></h3>
+        <p class="preorder-modal__description" data-js="preorder-modal-description"></p>
+      </header>
+      <form method="post">
+        <input type="email" name="email" id="email" placeholder="inbox@mail.ru" autocomplete="email" autofocus required data-js="preorder-email-input">
+        <p class="preorder-modal__error" data-js="preorder-error" hidden></p>
+        <footer class="preorder-modal__buttons">
+          <button type="submit" class="preorder-modal__submit" data-js="preorder-button-submit">Get the game</button>
+          <button type="button" class="preorder-modal__close" data-js="preorder-button-close"
+            aria-label="Close modal">Close</button>
+        </footer>
+      </form>
+    </div>
   </dialog>
   <!--Модуль Vite-->
   <script type="module" src="/src/main.js"></script>
