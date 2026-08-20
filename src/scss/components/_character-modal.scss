@@ -8,7 +8,7 @@
     border: var(--border-accent-dark);
     border-radius: var(--border-radius-card);
     color: var(--color-text);
-    background: linear-gradient(145deg, rgb(2 2 2 / 98%), rgb(49 34 7 / 98%));
+    background: var(--background-modal);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
     scrollbar-width: none;
 
@@ -22,7 +22,6 @@
     }
 
     &__content {
-        position: relative;
         display: flex;
         flex-direction: column;
         gap: 35px;

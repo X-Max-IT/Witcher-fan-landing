@@ -1,0 +1,116 @@
+@use '../abstracts' as *;
+
+.preorder-modal {
+    width: min(530px, 90vw);
+    overflow-y: auto;
+    padding: 0;
+    border: var(--border);
+    border-radius: var(--border-radius-card);
+    background: var(--color-modal);
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::backdrop {
+        background: rgba(5, 5, 5, 0.75);
+        backdrop-filter: blur(5px);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: clamp(25px, 5vw, 30px);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        color: var(--color-text);
+    }
+
+    &__title {
+        // margin-bottom: 5px;
+        text-align: center;
+        text-transform: var(--text-uppercase);
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    &__email {
+        width: 100%;
+        display: inline-flex;
+        outline: none;
+        border: 1px solid var(--color-text-muted);
+        background-color: #0a0f11;
+        border-radius: var(--border-radius);
+        color: var(--color-text);
+        padding: 10px;
+
+        &:focus {
+            border-color: var(--color-text);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        color: var(--color-text);
+    }
+
+    &__submit {
+        width: 100%;
+        background: var(--color-accent);
+        color: var(--color-text);
+        font-weight: 400;
+    }
+
+    &__close {
+        width: 100%;
+        color: var(--color-text);
+        font-weight: 400;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 3px;
+    }
+
+    &__error {
+        color: red;
+    }
+
+    &__reset {
+        @include reset-button;
+        @include fluid-text(18, 16);
+
+        display: inline-flex;
+        justify-content: center;
+        padding: 0;
+        text-transform: var(--text-uppercase);
+        color: var(--color-text);
+        background: transparent;
+        border: var(--border);
+        transition: transform var(--transition-duration);
+
+        @include hover {
+            transform: scale(1.08);
+        }
+    }
+}

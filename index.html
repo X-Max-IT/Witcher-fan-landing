@@ -172,18 +172,21 @@
   <footer class="footer"></footer>
 
 
-  <dialog open class="preorder-modal" data-js="preorder-modal">
+  <dialog class="preorder-modal" data-js="preorder-modal">
     <div class="preorder-modal__container">
       <header class="preorder-modal__header">
-        <h3 class="preorder-modal__title" data-js="preorder-modal-title"></h3>
-        <p class="preorder-modal__description" data-js="preorder-modal-description"></p>
+        <img src="/src/assets/images/paint.png" alt="" width="50">
+        <h3 class="preorder-modal__title" data-js="preorder-modal-title">Pre-order now</h3>
+        <p class="preorder-modal__description" data-js="preorder-modal-description">Leave your email and we'll notify you when the game is available.</p>
       </header>
-      <form method="post">
-        <input type="email" name="email" id="email" placeholder="inbox@mail.ru" autocomplete="email" autofocus required data-js="preorder-email-input">
-        <p class="preorder-modal__error" data-js="preorder-error" hidden></p>
+      <form class="preorder-modal__form" method="post">
+        <div class="preorder-modal__input">
+          <input type="email" name="email" class="preorder-modal__email" placeholder="inbox@mail.ru" maxlength="50" autocomplete="email" required data-js="preorder-email-input">
+          <span class="preorder-modal__error" data-js="preorder-error"></span>
+        </div>
         <footer class="preorder-modal__buttons">
-          <button type="submit" class="preorder-modal__submit" data-js="preorder-button-submit">Get the game</button>
-          <button type="button" class="preorder-modal__close" data-js="preorder-button-close"
+          <button type="submit" class="button preorder-modal__submit" data-js="preorder-button-submit">Get the game</button>
+          <button type="button" class="button preorder-modal__close button--transparent button--accent" data-js="preorder-button-close"
             aria-label="Close modal">Close</button>
         </footer>
       </form>
