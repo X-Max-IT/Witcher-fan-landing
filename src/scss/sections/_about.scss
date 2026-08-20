@@ -109,6 +109,7 @@
         }
 
         &-title {
+            @include fluid-text(20, 16);
             text-transform: var(--text-uppercase);
             color: var(--color-accent);
         }

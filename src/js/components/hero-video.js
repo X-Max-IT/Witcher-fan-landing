@@ -8,8 +8,7 @@ export function initHeroVideo() {
 
     if (video && overlay && playButton) {
         video.src = videos.trailer;
-        video.poster = images.heroBanner;
-        overlay.style.backgroundImage = `url(${images.heroBanner})`;
+        overlay.style.backgroundImage = `url(${images.poster})`;
 
         playButton.addEventListener('click', () => {
             video.play();

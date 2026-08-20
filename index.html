@@ -132,9 +132,10 @@
           <div class="system__section system__section--minimum">
             <h4 class="system-section__title">Minimum</h4>
             <p class="system-section__text">OS: <span class="system-section__item">Windows 10 (64-bit)</span></p>
-            <p class="system-section__text">Processor: <span class="system-section__item">Intel Core i5-2500K / AMD FX-6300</span></p>
+            <p class="system-section__text">Processor: <span class="system-section__item">Intel Core i5-2500K / AMD
+                FX-6300</span></p>
             <p class="system-section__text">Memory: <span class="system-section__item">8 GB RAM</span></p>
-            <p class="system-section__text graphics">Graphics: 
+            <p class="system-section__text graphics">Graphics:
               <span class="system-section__item">NVIDIA GeForce GTX 770 /<br></span>
               <span class="system-section__item">AMD Radeon R9 280</span>
             </p>
@@ -144,9 +145,10 @@
           <div class="system__section system__section--recommended">
             <h4 class="system-section__title">Recommended</h4>
             <p class="system-section__text">OS: <span class="system-section__item">Windows 10/11 (64-bit)</span></p>
-            <p class="system-section__text">Processor: <span class="system-section__item">Intel Core i7-3770 / AMD Ryzen 5 3600</span></p>
+            <p class="system-section__text">Processor: <span class="system-section__item">Intel Core i7-3770 / AMD Ryzen
+                5 3600</span></p>
             <p class="system-section__text">Memory: <span class="system-section__item">16 GB RAM</span></p>
-            <p class="system-section__text graphics">Graphics: 
+            <p class="system-section__text graphics">Graphics:
               <span class="system-section__item">NVIDIA GeForce GTX 1060 6 GB /<br></span>
               <span class="system-section__item">AMD Radeon RX 5700 XT</span>
             </p>
@@ -156,10 +158,29 @@
         </div>
       </div>
     </section>
+    <section class="section preorder">
+      <div class="container preorder__container">
+        <div class="preorder__text">
+          <h2 class="preorder__title">Begin your journey</h2>
+          <p class="preorder__description">The path is yours to choose.</p>
+        </div>
+        <button type="button" class="button preorder__button button--background"
+          data-js="preorder">Pre-order now</button>
+      </div>
+    </section>
   </main>
   <footer class="footer"></footer>
 
 
+  <dialog open class="preorder-modal" data-js="preorder-modal">
+    <form method="post">
+      <h3 class="preorder-modal__title"></h3>
+      <p class="preorder-modal__text"></p>
+      <input type="email" name="email" id="email" placeholder="inbox@mail.ru">
+      <button type="button" class="preorder-modal__post" data-js="preorder-button-post">Get the game</button>
+      <button type="button" class="preorder-modal__close" data-js="preorder-button-close">Close</button>
+    </form>
+  </dialog>
   <!--Модуль Vite-->
   <script type="module" src="/src/main.js"></script>
 </body>

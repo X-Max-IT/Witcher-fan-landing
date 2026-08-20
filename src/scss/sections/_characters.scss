@@ -45,6 +45,7 @@
     border-radius: var(--border-radius-card);
     background-size: cover;
     background-position: center;
+    cursor: pointer;
     transition: border var(--transition-duration), transform var(--transition-duration);
 
     @include mobile-s {

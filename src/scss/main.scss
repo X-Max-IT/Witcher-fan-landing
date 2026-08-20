@@ -9,8 +9,9 @@
 @use './components/button-burger';
 @use './components/character-modal';
 
-@use './sections/header'; // Секция Шапки
+@use './sections/header';
 @use './sections/hero';
 @use './sections/about';
 @use './sections/characters';
 @use './sections/system-req';
+@use './sections/preorder';

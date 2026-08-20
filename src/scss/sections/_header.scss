@@ -47,8 +47,7 @@
     }
 
     &__link {
-        @include fluid-text(20, 14);
-        font-weight: 700;
+        @include fluid-text(20, 16);
     }
 
     &__actions {
