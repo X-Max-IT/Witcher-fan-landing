@@ -9,7 +9,7 @@ export async function fetchCharacters() {
 }
 
 function createCharacterCard(character) {
-    const card = document.createElement('div');
+    const card = document.createElement('article');
     card.classList.add('character-card');
     card.setAttribute('data-id', character.id);
     card.style.backgroundImage = `linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 70%),

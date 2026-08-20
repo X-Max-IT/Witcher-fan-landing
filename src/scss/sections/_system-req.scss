@@ -76,4 +76,8 @@
 .graphics .system-section__item:last-of-type {
     display: inline-block;
     margin-left: 80px;
+
+    @include tablet-and-down {
+        margin-left: 40px;
+    }
 }
