@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Geralt",
-        "avatar": "/images/geralt.webp",
+        "avatar": "/Witcher-fan-landing/images/geralt.webp",
         "shortDescription": "The White Wolf. Mutated witcher and master swordsman",
         "tags": [
             "Witcher",
@@ -14,7 +14,7 @@
     {
         "id": 2,
         "name": "Ciri",
-        "avatar": "/images/ciri.webp",
+        "avatar": "/Witcher-fan-landing/images/ciri.webp",
         "shortDescription": "Child of prophecy, with the power to shape worlds",
         "tags": [
             "Princess",
@@ -26,7 +26,7 @@
     {
         "id": 3,
         "name": "Yennefer",
-        "avatar": "/images/yennefer.webp",
+        "avatar": "/Witcher-fan-landing/images/yennefer.webp",
         "shortDescription": "A powerful sorceress witch a mysterious past",
         "tags": [
             "Sorceress",
@@ -38,7 +38,7 @@
     {
         "id": 4,
         "name": "Triss Merigold",
-        "avatar": "/images/triss.webp",
+        "avatar": "/Witcher-fan-landing/images/triss.webp",
         "shortDescription": "The Sorceress of Maribor and Geralt's loyal friend",
         "tags": [
             "Sorceress",
