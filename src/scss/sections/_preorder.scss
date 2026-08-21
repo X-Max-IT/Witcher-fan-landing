@@ -10,12 +10,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
     }
     &__text {
         display: flex;
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
     &__button {
         @include flex-center(true);

@@ -28,11 +28,11 @@
         gap: 50px;
 
         &-item {
-        transition: transform var(--transition-duration);
+            transition: transform var(--transition-duration);
 
-        @include hover {
-            transform: scale(1.1);
-        }
+            @include hover {
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -105,6 +105,13 @@
 
         &__menu.is-open {
             display: flex;
+        }
+
+    }
+
+    @include mobile-xs {
+        &__inner {
+            justify-content: space-between;
         }
     }
 

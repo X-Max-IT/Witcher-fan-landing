@@ -15,19 +15,26 @@ function getLocal() {
     return JSON.parse(localStorage.getItem(LOCAL_KEY));
 }
 
-function originalState() { //* Состояние 1 - оригинальная версия формы
-    const preorder = getLocal();
-    if (preorder?.isOrder) {
-        reminderStatus(preorder.email);  //* Если данные уже есть - открывается третье состояние формы
-        return;
-    }
+function resetModal() {
     title.textContent = 'Pre-order now';
     descript.textContent = 'Leave your email and well notify you when the game is available.';
 
     sumbitButton.style.display = '';
     input.style.display = '';
+    input.value = '';
     errorMessage.style.display = 'none';
+    errorMessage.textContent = '';
     restartButton.style.display = 'none';
+}
+
+function originalState() { //* Состояние 1 - оригинальная версия формы
+    const preorder = getLocal();
+    if (preorder?.isOrder) {
+        reminderStatus(preorder.email);  //* Если данные уже есть - открывается третье состояние формы
+    }
+    else {
+        resetModal(); //* Если данных нет - сбрасываем форму до оригинала
+    }
 }
 
 function stateOfSuccess() { //* Состояние 2 - Успешный предзаказ

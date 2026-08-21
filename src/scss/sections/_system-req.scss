@@ -80,4 +80,8 @@
     @include tablet-and-down {
         margin-left: 40px;
     }
+
+    @include mobile-xs {
+        margin-left: 20px;
+    }
 }
