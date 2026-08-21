@@ -75,7 +75,6 @@ export function initPreorderModal() {
     })
     
     input.addEventListener('input', (event) => {
-        event.preventDefault();
         errorMessage.style.display = 'none';
     })
     
