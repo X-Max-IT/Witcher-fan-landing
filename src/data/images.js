@@ -2,8 +2,8 @@ export const images = {
     logo: new URL('../assets/images/logo.png', import.meta.url).href,
     poster: new URL('../assets/images/poster.webp', import.meta.url).href,
     witcherHorse: new URL('../assets/images/witcher-horse.webp', import.meta.url).href,
-    // witcherHorse: new URL('../assets/images/orig.webp', import.meta.url).href,
 
+    iconTelega: new URL('../assets/icons/telega.svg', import.meta.url).href,
     iconTwitter: new URL('../assets/icons/twitter.svg', import.meta.url).href,
     iconYoutube: new URL('../assets/icons/youtube.svg', import.meta.url).href,
     iconFacebook: new URL('../assets/icons/facebook.svg', import.meta.url).href,

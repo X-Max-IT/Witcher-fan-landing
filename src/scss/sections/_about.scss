@@ -7,15 +7,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 50px;
+        gap: px-to-rem(50);
 
         @include tablet-and-down {
-            gap: 30px;
+            gap: px-to-rem(30);
         }
 
         @include mobile {
             flex-direction: column;
-            gap: 40px;
+            gap: px-to-rem(40);
         }
 
     }
@@ -37,10 +37,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 50px;
+        gap: px-to-rem(50);
 
         @include tablet-and-down {
-            gap: 30px;
+            gap: px-to-rem(30);
         }
 
         @include mobile {
@@ -65,21 +65,21 @@
     &__text {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: px-to-rem(20);
     }
 
     &__features {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: px-to-rem(20);
 
         @include tablet-and-down {
-            gap: 10px;
+            gap: px-to-rem(10);
         }
 
         @include mobile-s {
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: px-to-rem(30);
         }
     }
 
@@ -88,16 +88,13 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 10px;
+        gap: px-to-rem(10);
 
         &-icon {
             width: 80px;
             height: auto;
 
             @include tablet-and-down {
-                width: 60px;
-            }
-            @include mobile-s {
                 width: 60px;
             }
         }

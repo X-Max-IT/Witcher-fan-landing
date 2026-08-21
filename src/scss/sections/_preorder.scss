@@ -10,17 +10,17 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: px-to-rem(20);
     }
     &__text {
         display: flex;
         flex-direction: column;
         text-align: center;
-        gap: 10px;
+        gap: px-to-rem(10);
     }
     &__button {
         @include flex-center(true);
-        gap: 10px;
+        gap: px-to-rem(10);
         
         &::after {
             content: '→';

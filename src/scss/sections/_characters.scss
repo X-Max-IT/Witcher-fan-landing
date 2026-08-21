@@ -5,13 +5,13 @@
     &__container {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: px-to-rem(10);
     }
 
     &__head {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: px-to-rem(15);
         text-transform: var(--text-uppercase);
         align-items: center;
 
@@ -27,7 +27,7 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
+        gap: px-to-rem(16);
         place-items: center;
     }
 }
@@ -35,7 +35,7 @@
 .character-card {
     width: 100%;
     aspect-ratio: 3 / 4;
-    max-height: 420px;
+    max-height: px-to-rem(420);
     border: var(--border-accent-dark);
     display: flex;
     flex-direction: column;
@@ -57,18 +57,18 @@
         margin-top: auto;
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: px-to-rem(25);
         align-items: flex-start;
 
         @include mobile-s {
-            gap: 20px;
+            gap: px-to-rem(20);
         }
     }
 
     &__text {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: px-to-rem(10);
     }
 
     &__title {
@@ -78,7 +78,7 @@
 
     &__description {
         font-weight: 300;
-        font-size: 16px;
+        font-size: px-to-rem(16);
 
         @include mobile-s {
             display: none;
@@ -89,7 +89,7 @@
         @include flex-center(true);
 
         align-items: center;
-        gap: 10px;
+        gap: px-to-rem(10);
         padding: 0;
         text-transform: var(--text-uppercase);
         color: var(--color-accent);
