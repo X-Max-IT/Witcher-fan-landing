@@ -1,4 +1,4 @@
-const CHARACTERS_API_URL = '/data/characters.json';
+const CHARACTERS_API_URL = '/Witcher-fan-landing/data/characters.json';
 
 const characterList = document.querySelector('[data-js="characters-list"]');
 
