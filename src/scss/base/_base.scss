@@ -1,5 +1,8 @@
 @use '../abstracts' as *;
 
+* {
+    touch-action: manipulation;
+}
 html {
     scroll-behavior: smooth;
 }
