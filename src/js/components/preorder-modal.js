@@ -7,99 +7,86 @@ const input = modal.querySelector('[data-js="preorder-email-input"]');
 const errorMessage = modal.querySelector('[data-js="preorder-error"]');
 const sumbitButton = modal.querySelector('[data-js="preorder-button-submit"]');
 const closeButton = modal.querySelector('[data-js="preorder-button-close"]');
+const restartButton = modal.querySelector('[data-js="preorder-button-restart"]');
 
-function getPreorder() {
-    return JSON.parse(localStorage.getItem('preorder'));
+const LOCAL_KEY = 'preorder';
+
+function getLocal() {
+    return JSON.parse(localStorage.getItem(LOCAL_KEY));
 }
 
-function resetModal() {
-    form.reset();
-    input.style.display = '';
+function originalState() { //* Состояние 1 - оригинальная версия формы
+    const preorder = getLocal();
+    if (preorder?.isOrder) {
+        reminderStatus(preorder.email);  //* Если данные уже есть - открывается третье состояние формы
+        return;
+    }
+    title.textContent = 'Pre-order now';
+    descript.textContent = 'Leave your email and well notify you when the game is available.';
+
     sumbitButton.style.display = '';
+    input.style.display = '';
     errorMessage.style.display = 'none';
-    errorMessage.textContent = '';
-
-    const resetMail = form.querySelector('[data-js="reset-email"]');
-    //* Если кнопка ресета уже есть - удаляю
-    if (resetMail) {
-        resetMail.remove();
-    }
+    restartButton.style.display = 'none';
 }
-function succesfulOrder() {
+
+function stateOfSuccess() { //* Состояние 2 - Успешный предзаказ
     title.textContent = 'Successful';
-    descript.textContent = `You have successfully placed an order`;
-    input.style.display = 'none';
-    sumbitButton.style.display = 'none';
-}
-function updateInformation() {
-    const preorder = getPreorder();
-    if (!preorder?.isOrder) return;
-    let resetEmail = form.querySelector('[data-js="reset-email"]');
+    descript.textContent = 'You have successfully placed an order';
 
-    if (!resetEmail) {
-        resetEmail = document.createElement('button');
-        resetEmail.classList.add('preorder-modal__reset');
-        resetEmail.textContent = 'Order again';
-        resetEmail.setAttribute('data-js', 'reset-email');
-        form.append(resetEmail);
-    }
+    sumbitButton.style.display = 'none';
+    input.style.display = 'none';
+}
+
+function reminderStatus(email) { //* Состояние 3 - Напоминание об успешном предзаказе при повторном вызове
     title.textContent = 'Successful';
-    descript.textContent = `You have successfully placed an order by mail: ${preorder.email}`;
-    input.style.display = 'none';
+    descript.textContent = `You have successfully placed an order by mail: ${email}`;
     sumbitButton.style.display = 'none';
-
-    resetEmail.replaceWith(resetEmail.cloneNode(true));
-    resetEmail = form.querySelector('[data-js="reset-email"]');
-    resetEmail.addEventListener('click', () => {
-        localStorage.removeItem('preorder');
-        resetModal();
-    });
+    input.style.display = 'none';
+    restartButton.style.display = 'block';
 }
+
+restartButton.addEventListener('click', () => {
+    localStorage.removeItem(LOCAL_KEY);
+    originalState();
+})
 
 openModalBtn.forEach(button => {
     button.addEventListener('click', () => {
         modal.showModal();
-        const preorder = getPreorder();
-        if (preorder?.isOrder) {      //* Если значение undefined - сбрасывает форму. А иначе должен выйти экран успеха
-            updateInformation();
-            return;
-        }
-        resetModal();
-        input.focus();
+        originalState();
     })
 })
 
-if (input && form) {
-    input.addEventListener('invalid', (event) => {
-        event.preventDefault();
-        errorMessage.textContent = 'Geralt is not happy with your mail...';
-        errorMessage.style.display = 'block';
-        return;
-    });
-    input.addEventListener('input', (event) => {
-        event.preventDefault();
-        errorMessage.style.display = 'none';
-    });
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const email = input.value.trim();
-        if (!email) return;
-        const data = {
-            email,
-            isOrder: true
-        };
-        localStorage.setItem('preorder', JSON.stringify(data));
-        succesfulOrder();
-    })
-}
+input.addEventListener('invalid', (event) => {
+    event.preventDefault();
+    errorMessage.textContent = 'Geralt is not happy with your mail...';
+    errorMessage.style.display = 'block';
+    return;
+})
+
+input.addEventListener('input', (event) => {
+    event.preventDefault();
+    errorMessage.style.display = 'none';
+})
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = input.value.trim();
+    if (!email) return;
+    const data = {
+        email,
+        isOrder: true
+    }
+    localStorage.setItem(LOCAL_KEY, JSON.stringify(data));
+    stateOfSuccess();
+})
+
 closeButton.addEventListener('click', () => {
     modal.close();
-    resetModal();
-});
-modal.addEventListener('click', event => {
+})
+modal.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.close();
-        resetModal();
     }
 })
-
