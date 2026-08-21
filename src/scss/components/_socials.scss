@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 1.3vw, 25px);
+
+    &-link {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    &-icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        flex-shrink: 0;
+        transition: transform var(--transition-duration);
+
+        @include hover {
+            transform: scale(1.2);
+        }
+    }
+}

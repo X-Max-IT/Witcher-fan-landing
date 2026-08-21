@@ -6,7 +6,7 @@
     padding: 0;
     border: var(--border);
     border-radius: var(--border-radius-card);
-    background: var(--color-modal);
+    background: var(--color-modal-order);
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
@@ -14,7 +14,7 @@
     }
 
     &::backdrop {
-        background: rgba(5, 5, 5, 0.75);
+        background: var(--background-backdrop);
         backdrop-filter: blur(5px);
     }
 

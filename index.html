@@ -11,8 +11,8 @@
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="#" class="header__logo">
-        <img class="header__logo-image" alt="The Witcher 3: Wild Hunt" data-js="logo" id="js-logo" width="200">
+      <a href="#" class="logo">
+        <img class="logo-image" alt="The Witcher 3: Wild Hunt" data-js="logo" id="js-logo" width="180">
       </a>
       <nav class="header__menu" id="mobile-menu" data-js="mobile-menu">
         <ul class="header__list">
@@ -28,15 +28,15 @@
         </ul>
       </nav>
       <div class="header__actions">
-        <div class="header__socials">
-          <a href="#" class="header__social-link">
-            <img alt="Twitter" class="header__social-icon" data-js="twitter">
+        <div class="socials">
+          <a href="#" class="socials-link">
+            <img alt="Twitter" class="socials-icon" data-js="twitter">
           </a>
-          <a href="#" class="header__social-link">
-            <img alt="Youtube" class="header__social-icon" data-js="youtube">
+          <a href="#" class="socials-link">
+            <img alt="Youtube" class="socials-icon" data-js="youtube">
           </a>
-          <a href="#" class="header__social-link">
-            <img alt="Facebook" class="header__social-icon" data-js="facebook">
+          <a href="#" class="socials-link">
+            <img alt="Facebook" class="socials-icon" data-js="facebook">
           </a>
         </div>
         <button type="button" class="button header__button button--transparent button--accent"
@@ -169,7 +169,28 @@
       </div>
     </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="container footer__container">
+      <a href="#" class="logo">
+        <img class="logo-image" alt="The Witcher 3: Wild Hunt" data-js="logo" id="js-logo" width="180">
+      </a>
+      <div class="footer__content">
+        <p class="footer__content-text">This is a fan project, not affiliated with CD Projekt</p>
+        <span class="footer__content-year">© 2026 Fan-made landing page</span>
+      </div>
+      <div class="socials">
+        <a href="#" class="socials-link">
+          <img alt="Twitter" class="socials-icon" data-js="twitter">
+        </a>
+        <a href="#" class="socials-link">
+          <img alt="Youtube" class="socials-icon" data-js="youtube">
+        </a>
+        <a href="#" class="socials-link">
+          <img alt="Facebook" class="socials-icon" data-js="facebook">
+        </a>
+      </div>
+    </div>
+  </footer>
 
 
   <dialog class="preorder-modal" data-js="preorder-modal">
@@ -177,17 +198,20 @@
       <header class="preorder-modal__header">
         <img src="/src/assets/images/paint.png" alt="" width="50">
         <h3 class="preorder-modal__title" data-js="preorder-modal-title">Pre-order now</h3>
-        <p class="preorder-modal__description" data-js="preorder-modal-description">Leave your email and we'll notify you when the game is available.</p>
+        <p class="preorder-modal__description" data-js="preorder-modal-description">Leave your email and we'll notify
+          you when the game is available.</p>
       </header>
       <form class="preorder-modal__form" method="post">
         <div class="preorder-modal__input">
-          <input type="email" name="email" class="preorder-modal__email" placeholder="inbox@mail.ru" maxlength="50" autocomplete="email" required data-js="preorder-email-input">
+          <input type="email" name="email" class="preorder-modal__email" placeholder="inbox@mail.ru" maxlength="50"
+            autocomplete="email" required data-js="preorder-email-input">
           <span class="preorder-modal__error" data-js="preorder-error"></span>
         </div>
         <footer class="preorder-modal__buttons">
-          <button type="submit" class="button preorder-modal__submit" data-js="preorder-button-submit">Get the game</button>
-          <button type="button" class="button preorder-modal__close button--transparent button--accent" data-js="preorder-button-close"
-            aria-label="Close modal">Close</button>
+          <button type="submit" class="button preorder-modal__submit" data-js="preorder-button-submit">Get the
+            game</button>
+          <button type="button" class="button preorder-modal__close button--transparent button--accent"
+            data-js="preorder-button-close" aria-label="Close modal">Close</button>
         </footer>
       </form>
     </div>

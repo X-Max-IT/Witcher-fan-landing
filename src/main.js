@@ -8,11 +8,25 @@ import './js/components/character-modal';
 import './js/components/preorder-modal';
 
 
-document.querySelector('[data-js="logo"]').src = images.logo;
+const logo = document.querySelectorAll('[data-js="logo"]');
+logo.forEach(l => {
+    l.src = images.logo;
+})
 
-document.querySelector('[data-js="twitter"]').src = images.iconTwitter;
-document.querySelector('[data-js="youtube"]').src = images.iconYoutube;
-document.querySelector('[data-js="facebook"]').src = images.iconFacebook;
+function renderIcons(element, icon) {
+    element.forEach(el => {
+        el.src = icon;
+    })
+}
+
+const twitter = document.querySelectorAll('[data-js="twitter"]');
+const youtube = document.querySelectorAll('[data-js="youtube"]');
+const facebook = document.querySelectorAll('[data-js="facebook"]');
+
+renderIcons(twitter, images.iconTwitter);
+renderIcons(youtube, images.iconYoutube);
+renderIcons(facebook, images.iconFacebook);
+
 
 document.querySelector('[data-js="rich-story"]').src = images.iconMech;
 document.querySelector('[data-js="open-world"]').src = images.iconFlower;

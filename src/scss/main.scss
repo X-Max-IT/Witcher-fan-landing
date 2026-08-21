@@ -6,9 +6,11 @@
 @use './base/base'; // Базовые стили
 
 @use './components/button';
+@use './components/logo';
 @use './components/button-burger';
 @use './components/character-modal';
 @use './components/preorder-modal';
+@use './components/socials';
 
 @use './sections/header';
 @use './sections/hero';
@@ -16,3 +18,4 @@
 @use './sections/characters';
 @use './sections/system-req';
 @use './sections/preorder';
+@use './sections/footer';

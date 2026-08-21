@@ -1,9 +1,9 @@
 @use '../abstracts' as *;
 
 .header {
-    padding-top: 10px;
+    padding: 10px 0;
     text-transform: var(--text-uppercase);
-    background-color: #0a0a0a;
+    background-color: var(--color-header);
     z-index: 30;
 
     &__inner {
@@ -13,16 +13,6 @@
         justify-content: space-between;
         align-items: center;
         gap: 30px;
-    }
-
-    &__logo {
-        flex-shrink: 0;
-
-        &-image {
-            display: block;
-            width: 200px;
-            height: auto;
-        }
     }
 
     &__menu {
@@ -54,26 +44,6 @@
         display: flex;
         align-items: center;
         gap: 30px;
-    }
-
-    &__socials {
-        display: flex;
-        align-items: center;
-        gap: clamp(12px, 1.3vw, 25px);
-    }
-
-    &__social-link {
-        display: flex;
-    }
-
-    &__social-icon {
-        width: 24px;
-        height: 24px;
-        transition: transform var(--transition-duration);
-
-        @include hover {
-            transform: scale(1.2);
-        }
     }
 
     @include tablet-and-down {

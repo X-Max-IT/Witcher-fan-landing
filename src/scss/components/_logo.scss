@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.logo {
+    flex-shrink: 0;
+
+    &-image {
+        display: block;
+        height: auto;
+
+        @include tablet-and-down {
+            width: 160px;
+        }
+    }
+}
